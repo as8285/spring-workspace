@@ -9,13 +9,13 @@ public class HelloTestApp03UsingSpring {
 
 	public static void main(String[] args) {
 		
-		// 1+2. BeanFactory »ı¼º
+		// 1+2. BeanFactory ìƒì„±
 		BeanFactory factory = new XmlBeanFactory(new FileSystemResource("src/main/resources/config/hello.xml"));
 		
-		// 3. factory ÇÑÅ× hello ÀÌ¸§À» °®´Â Hello °´Ã¼ ¿äÃ»
+		// 3. factory í•œí…Œ hello ì´ë¦„ì„ ê°–ëŠ” Hello ê°ì²´ ìš”ì²­
 		Hello hello = (Hello) factory.getBean("hello");
 		
-		// 4. printMessage() È£Ãâ
+		// 4. printMessage() í˜¸ì¶œ
 		hello.printMessage();
 		
 		

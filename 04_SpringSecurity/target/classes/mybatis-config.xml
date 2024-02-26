@@ -2,15 +2,13 @@
 <configuration>
 	<settings>
 		<setting name="jdbcTypeForNull" value="NULL"/>
-	
 	</settings>
 	
 	<typeAliases>
-	<typeAlias type="com.kh.security.model.vo.member" alias="Member"/>
+		<typeAlias type="com.kh.security.model.vo.Member" alias="Member"/>
 	</typeAliases>
-	<mappers>
 	
-	<mapper resource="mappers/member-mapper.xml"/>
+	<mappers>
+		<mapper resource="mappers/member-mapper.xml"/>
 	</mappers>
-
 </configuration>

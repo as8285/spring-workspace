@@ -1,25 +1,28 @@
 package com.kh.dice;
 
+import com.kh.dice.impl.DiceAImpl;
 import com.kh.dice.impl.DiceBImpl;
-import com.kh.dice.impl.Player03;
 import com.kh.dice.play.Player01;
 import com.kh.dice.play.Player02;
-// Spring ¾È¾²°í Àç»ç¿ëÇÏ´Â ¹æ¹ı : ÀÎÅÍÆäÀÌ½º
+import com.kh.dice.play.Player03;
+
+// Spring ì•ˆì“°ê³  ì¬ì‚¬ìš©í•˜ëŠ” ë°©ë²• : ì¸í„°í˜ì´ìŠ¤
+
 public class DiceTestApp02 {
 
 	public static void main(String[] args) {
-		Player03 player01 = new Player03();
+		Player03 player01 = new Player03(new DiceAImpl());
 		player01.playDice(12);
-		System.out.println("=======");
-		System.out.println("¼±ÅÃµÈ ÁÖ»çÀ§¼ö ÃÑÇÕ : " + player01.getTotalValue());
-		System.out.println("=======");
-		
+		System.out.println("========");
+		System.out.println("ì„ íƒëœ ì£¼ì‚¬ìœ„ ìˆ˜ ì´í•© : " + player01.getTotalValue());
+		System.out.println("========");
+	
 		Player03 player02 = new Player03(new DiceBImpl());
 		player02.playDice(5);
-		System.out.println("=======");
-		System.out.println("¼±ÅÃµÈ ÁÖ»çÀ§¼ö ÃÑÇÕ : " + player02.getTotalValue());
-		System.out.println("=======");
-
+		System.out.println("========");
+		System.out.println("ì„ íƒëœ ì£¼ì‚¬ìœ„ ìˆ˜ ì´í•© : " + player02.getTotalValue());
+		System.out.println("========");
+	
 	}
 
 }
