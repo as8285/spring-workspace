@@ -18,21 +18,12 @@ public static void main(String[] args) {
 		Document doc = dBuilder.parse(url);
 		
 		doc.getDocumentElement().normalize();
+		
 		System.out.println("Root element : " + doc.getDocumentElement().getNodeName());
 		NodeList nList = doc.getElementsByTagName("row");
 	    System.out.println("파싱할 수 : " + nList.getLength());
 	    
-	    for(int i=0; i<nList.getLength();i++) {
-	    	
-	    	Node nNode = nList.item(i);
-	    	if(nNode.getNodeType()== Node.ELEMENT_NODE) {
-	    		Element elElement = (Element) nNode;
-	    		System.out.println(getTagValue("TITLE",elElement));
-	    		System.out.println("BEGIN_DE : " + getTagValue("BEGIN_DE",elElement));
-	    		System.out.println("END_DE : " + getTagValue("END_DE",elElement));
-	    	}else {}
-	    	
-	    }
+	  
 		
 	} catch (Exception e) {
 

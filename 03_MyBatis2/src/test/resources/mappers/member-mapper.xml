@@ -1,8 +1,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace = "MemberMapper">
-<select id="showAllMember">
-SELECT * FROM member
+<mapper namespace = "FilmMapper">
+<resultMap type="film" id="filmMap">
+		<id property="id" column="film_id"/>
+		<result property="title" column="title"/>
+		<result property="desc" column="description"/>
+	</resultMap>
+	<select id="showFilm" parameterType="filmText">
+		SELECT * FROM film_text;
+	</select>
 
-
-</select>
 </mapper>
