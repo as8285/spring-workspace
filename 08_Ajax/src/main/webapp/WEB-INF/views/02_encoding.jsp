@@ -12,7 +12,7 @@
 	<h2>Encoding 처리하기..</h2>
 	닉네임 :
 	<input type="text" name="nick"id="nick">
-	<input type="button" value="닉네임 보내기" id="btn"">
+	<input type="button" value="닉네임 보내기" id="btn">
 	<div id="result"></div>
 
 
