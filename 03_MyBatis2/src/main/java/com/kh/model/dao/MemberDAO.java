@@ -26,6 +26,7 @@ public class MemberDAO {
 
 	}
 
+	
 	public Member login(Member vo) {
 		return session.selectOne("memberMapper.login", vo);
 	}
@@ -43,6 +44,7 @@ public class MemberDAO {
 		
 		
 	}
+	
 	}
 
 

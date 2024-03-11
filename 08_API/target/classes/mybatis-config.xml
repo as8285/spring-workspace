@@ -9,7 +9,7 @@
 		
 </settings>
 <typeAliases>
-<typeAlias type="com.kh.api.model.vo.Sample" alias="Sample"/>
+<typeAlias type="com.kh.api.model.vo.Gallary" alias="Gallary"/>
 </typeAliases>
 
 <environments default="develop">
@@ -25,7 +25,7 @@
 </environment>
 </environments>
 <mappers>
-<mapper resource="mappers/sample-mapper.xml" />
+<mapper resource="mappers/gallary-mapper.xml" />
 
 </mappers>
 

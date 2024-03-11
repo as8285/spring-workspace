@@ -1,0 +1,9 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="gallaryMapper">
+
+<insert id="insertgallary" parameterType="gallary">
+INSERT sample(galTitle.SearchKeyword,WebImageUrl,galPhotographyLocation)
+VALUES(#{galTitle},#{SearchKeyword},#{WebImageUrl},#{galPhotographyLocation})
+</insert>
+</mapper>
+
