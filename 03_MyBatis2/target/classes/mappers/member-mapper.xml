@@ -7,6 +7,20 @@
 	 id는 primary key / result는 일반컬럼 
 	 property는 자바 필드 변수 이름 / column이 DB 해당 컬럼			 
 				 -->
+
+	<selec t>
+	
+	
+	<select id="showAllmember">
+	
+	SELECT*FROM member
+	</select>
+			
+<!-- login : select, parameterType : Member, resultType : Member -->
+	<select id="login" parameterType="Member" resultMap="MemberMap">
+		SELECT * FROM member
+		WHERE member_id=#{id} AND member_pwd=#{password}
+	</select>
 				 
 				 
 <resultMap type="Member" id="memberMap">	
@@ -23,6 +37,7 @@
 	
 	<select id="showAllMember" resultMap="MemberMap">
 		SELECT * FROM member
+		
 	</select>
 	
 	<!-- parameter값 예시 : #{id}, #{name} -->
@@ -32,6 +47,11 @@
 		VALUES(#{id}, #{password}, #{name})
 	</insert>
 	
+	
+	
+	
+	
+	
 	<!-- login : select, parameterType : Member, resultType : Member -->
 	<select id="login" parameterType="Member" resultMap="MemberMap">
 		SELECT * FROM member
@@ -39,6 +59,7 @@
 	</select>
 	
 	<!-- updateMember : update, parameterType : Member -->
+	
 	<update id="updateMember" parameterType="Member">
 		UPDATE member
 		 <trim prefix="SET" suffixOverrides=",">
