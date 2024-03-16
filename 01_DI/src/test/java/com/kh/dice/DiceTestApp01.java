@@ -8,16 +8,16 @@ public class DiceTestApp01 {
 	public static void main(String[] args) {
 		Player01 player01 = new Player01();
 		player01.playDice(12);
-		System.out.println("=======");
-		System.out.println("¼±ÅÃµÈ ÁÖ»çÀ§¼ö ÃÑÇÕ : " + player01.getTotalValue());
-		System.out.println("=======");
-		
+		System.out.println("========");
+		System.out.println("ì„ íƒëœ ì£¼ì‚¬ìœ„ ìˆ˜ ì´í•© : " + player01.getTotalValue());
+		System.out.println("========");
+	
 		Player02 player02 = new Player02();
 		player02.playDice(5);
-		System.out.println("=======");
-		System.out.println("¼±ÅÃµÈ ÁÖ»çÀ§¼ö ÃÑÇÕ : " + player02.getTotalValue());
-		System.out.println("=======");
-
+		System.out.println("========");
+		System.out.println("ì„ íƒëœ ì£¼ì‚¬ìœ„ ìˆ˜ ì´í•© : " + player02.getTotalValue());
+		System.out.println("========");
+	
 	}
 
 }

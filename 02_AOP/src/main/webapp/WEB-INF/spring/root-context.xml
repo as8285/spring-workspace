@@ -1,17 +1,31 @@
-<?XML VERSION="1.0" ENCODING="UTF-8"?>
-<BEANS XMLNS="HTTP://WWW.SPRINGFRAMEWORK.ORG/SCHEMA/BEANS"
-	XMLNS:XSI="HTTP://WWW.W3.ORG/2001/XMLSCHEMA-INSTANCE"
-	XMLNS:CONTEXT="HTTP://WWW.SPRINGFRAMEWORK.ORG/SCHEMA/CONTEXT"
-	XMLNS:AOP="HTTP://WWW.SPRINGFRAMEWORK.ORG/SCHEMA/AOP"
-	XSI:SCHEMALOCATION="HTTP://WWW.SPRINGFRAMEWORK.ORG/SCHEMA/BEANS HTTPS://WWW.SPRINGFRAMEWORK.ORG/SCHEMA/BEANS/SPRING-BEANS.XSD
-		HTTP://WWW.SPRINGFRAMEWORK.ORG/SCHEMA/CONTEXT HTTP://WWW.SPRINGFRAMEWORK.ORG/SCHEMA/CONTEXT/SPRING-CONTEXT-4.3.XSD
-		HTTP://WWW.SPRINGFRAMEWORK.ORG/SCHEMA/AOP HTTP://WWW.SPRINGFRAMEWORK.ORG/SCHEMA/AOP/SPRING-AOP-4.3.XSD">
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
 	
-	<!-- ROOT CONTEXT: DEFINES SHARED RESOURCES VISIBLE TO ALL OTHER WEB COMPONENTS -->
-		<CONTEXT:ANNOTAION-CONFIG></CONTEXT:ANNOTAION-CONFIG>
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<context:annotation-config></context:annotation-config>
+	
+	<context:component-scan base-package="com.kh.aop"></context:component-scan>
 		
-		<CONTEXT:COMPONENT-SCAN BASE-PACKAGE="COM.KH.SERVICE"></CONTEXT:COMPONENT-SCAN>
-		<CONTEXT:COMPONENT-SCAN BASE-PACKAGE="COM.KH.AOP"></CONTEXT:COMPONENT-SCAN>
-		+
-		
-</BEANS>
+	<!-- 
+		클래스를 이용해서 프록시를 생성하고 싶다면 proxy-target-class="true" 속성 추가
+	 -->
+	<!--  <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+	
+	<aop:aspectj-autoproxy proxy-target-class="true"/>
+	
+	<bean id="characterAspect" class="com.kh.aop.aspect.CharacterAspect"/>-->
+	<bean id="character" class="com.kh.aop.character.Character" />
+	
+</beans>
+
+
+
+
+
+
